@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>McDonald's Meal Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8e1;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #d32f2f;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: #ffc107;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>McDonald's Meal Plan</h1>
+
+    <div class="box">
+        <input type="radio" name="meal" value="Burger Meal - ₹150"> Burger Meal (₹99)<br><br>
+        <input type="radio" name="meal" value="Pizza Meal - ₹200"> Pizza Meal (₹159)<br><br>
+        <input type="radio" name="meal" value="Combo Meal - ₹250"> Combo Meal (₹249)<br><br>
+
+        <button onclick="showMeal()">Submit</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function showMeal() {
+            var meals = document.getElementsByName("meal");
+            var selected = "";
+
+            for (var i = 0; i < meals.length; i++) {
+                if (meals[i].checked) {
+                    selected = meals[i].value;
+                }
+            }
+
+            if (selected === "") {
+                document.getElementById("result").innerHTML =
+                    "Please select a meal plan.";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "You selected: " + selected;
+            }
+        }
+    </script>
+
+</body>
+</html>
