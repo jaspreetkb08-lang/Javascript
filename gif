@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        what can Javascript do?
+    </h2>
+    <p> Javascript can change HTML attribute values.</p>
+    <p> In this case Javascript Chnages the vslue of src (source) attribute of an image.</p>
+
+    <button 
+    onclick="document.getElementById('myimage').src='https://giphy.com/gifs/qWmn0h4IrnTWU5GyFX'">
+</button>
+<img id="myImage" src="https://giphy.com/gifs/computer-working-cat-LHZyixOnHwDDy">
+<br> <br> <br>
+
+<button 
+onclick="document.getElementById('myImage').src='https://giphy.com/gifs/service-department-customer-T8Dhl1KPyzRqU'">
+</button>
+</body>
+</html>
